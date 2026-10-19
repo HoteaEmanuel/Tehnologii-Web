@@ -13,25 +13,26 @@
         <img src="../MEDIA/login-brand.svg" alt="Imagine login" />
       </div>
       <div class="separator"></div>
-      <div class="login-form">
+      <form id="loginForm" class="login-form" novalidate>
         <h2>Login</h2>
         <div class="container">
-          <label>Email</label>
+          <label for="email">Email</label>
           <span class="required-field">*</span>
         </div>
 
-        <input type="email" placeholder="Email" />
+        <input type="email" id="email" placeholder="Email" />
         <div class="container">
-          <label>Parola</label>
+          <label for="password">Parola</label>
           <span class="required-field">*</span>
         </div>
 
-        <input type="password" placeholder="Parola" />
-        <button>Login</button>
+        <input type="password" id="password" placeholder="Parola" />
+        <button type="submit">Login</button>
         <p class="register-text">
           Nu ai cont? <a href="register.html">Inregistreaza-te</a>
         </p>
-      </div>
+      </form>
     </div>
+    <script src="../JS/login_js.js"></script>
   </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav page" aria-label="Main">
+      <a class="brand" href="index.html">CSS Lab</a>
+      <ul class="nav-links">
+        <li><a href="#step-2">Box model</a></li>
+        <li><a href="#step-4">Gallery</a></li>
+        <li><a href="bootstrap-gallery.html">Bootstrap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <section class="intro">
+      <h1>CSS selectors, box model and layout</h1>
+    </section>
+
+    <section id="step-1" class="panel" aria-labelledby="h-step-1">
+      <h2 id="h-step-1">Step 1. Selectors and declarations</h2>
+      <p class="important">An important paragraph</p>
+    </section>
+
+    <section id="step-2" class="panel" aria-labelledby="h-step-2">
+      <h2 id="h-step-2">Step 2. Box model</h2>
+      <div class="cards">
+        <article class="card-a">
+          <h3>Card A: content-box</h3>
+        </article>
+        <article class="card-b">
+          <h3>Card B: border-box</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="step-4" class="panel" aria-labelledby="h-step-4">
+      <h2 id="h-step-4">Step 4. Grid gallery</h2>
+      <div class="gallery">
+        <article class="gallery-card"><h3>HTML</h3><p>Structure and meaning of a page.</p></article>
+        <article class="gallery-card"><h3>CSS</h3><p>Presentation and layout.</p></article>
+        <article class="gallery-card"><h3>JavaScript</h3><p>Behaviour and interaction.</p></article>
+        <article class="gallery-card"><h3>Flexbox</h3><p>One-dimensional layouts.</p></article>
+        <article class="gallery-card"><h3>Grid</h3><p>Two-dimensional layouts.</p></article>
+        <article class="gallery-card"><h3>Bootstrap</h3><p>A ready-made component library.</p></article>
+      </div>
+    </section>
+
+    <section id="step-5" class="panel" aria-labelledby="h-step-5">
+      <h2 id="h-step-5">Step 5. Sidebar and main content</h2>
+      <div class="layout">
+        <aside class="sidebar" aria-label="Sidebar">
+          <h3>On this page</h3>
+          <ul>
+            <li><a href="#step-1">Selectors</a></li>
+            <li><a href="#step-2">Box model</a></li>
+            <li><a href="#step-4">Gallery</a></li>
+          </ul>
+        </aside>
+        <div class="content">
+          <h3>Main content</h3>
+          <p>Web technologies combine HTML for structure, CSS for presentation and JavaScript for behaviour.</p>
+          <p>Pneumonoultramicroscopicsilicovolcanoconiosis</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page">
+    <p><a href="bootstrap-gallery.html">Bootstrap gallery</a></p>
+  </footer>
+</body>
+</html>

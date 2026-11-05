@@ -17,5 +17,19 @@ function showNextImage() {
     currentIndex = (currentIndex + 1) % images.length;
     mainImage.src = images[currentIndex];
 }
-// Slider automat la 3 secunde
-setInterval(showNextImage, 3000);
+let sliderId;
+// Porneste sliderul automat (la 3 secunde), fara sa creeze un al doilea interval
+function startSlider() {
+    if (sliderId === undefined) {
+        sliderId = setInterval(showNextImage, 3000);
+    }
+}
+// Opreste sliderul automat
+function stopSlider() {
+    clearInterval(sliderId);
+    sliderId = undefined;
+}
+// Pauza cand mouse-ul este deasupra imaginii, reluare cand pleaca de pe ea
+mainImage.addEventListener("mouseenter", stopSlider);
+mainImage.addEventListener("mouseleave", startSlider);
+startSlider();

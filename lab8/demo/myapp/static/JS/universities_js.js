@@ -1,4 +1,4 @@
-const API_URL = "http://universities.hipolabs.com/search?country=Romania";
+const API_URL = "https://universities.hipolabs.com/search?country=Romania";
 const statusEl = document.getElementById("status");
 const tbody = document.getElementById("tbody");
 const qInput = document.getElementById("q");
@@ -16,13 +16,23 @@ function escapeHTML(value) {
   }[c]));
 }
 
+function safeUrl(value) {
+  try {
+    const u = new URL(value);
+    return u.protocol === "http:" || u.protocol === "https:" ? u.href : null;
+  } catch {
+    return null;
+  }
+}
+
 function render(data) {
   current = data;
   tbody.innerHTML = data.map(u => {
-    const url = u.web_pages?.[0];
+    const raw = u.web_pages?.[0];
+    const url = raw ? safeUrl(raw) : null;
     const site = url
       ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener">${escapeHTML(url)}</a>`
-      : "";
+      : escapeHTML(raw || "");
     return `
       <tr>
         <td>${escapeHTML(u.name || "")}</td>

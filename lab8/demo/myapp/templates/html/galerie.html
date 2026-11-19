@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie</title>
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/home_style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/galerie.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/cursor.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Comunitatea de Tehnologii Web 2025</h1>
+      <nav>
+        <a href="{% url 'home' %}">Acasa</a>
+        <a href="#">Tehnologii</a>
+        <a href="{% url 'universities' %}">Facultati</a>
+        <a href="{% url 'galerie' %}">Galerie</a>
+        <a href="{% url 'chatbot' %}">ChatBot</a>
+        <a href="{% url 'login' %}">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="galerie-titlu">Galerie</h2>
+
+    <!-- Container principal pentru carusel -->
+    <div class="carousel-container">
+      <!-- Container pentru imaginea mare -->
+      <div class="carousel-view">
+        <!-- Imaginea curenta din carusel -->
+        <img id="carousel-image" src="{% static 'MEDIA/g1.jpeg' %}" alt="Carusel">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Comunitatea de Tehnologii Web</p>
+      <p>
+        <a href="https://www.uvt.ro/">Universitatea de Vest din Timisoara</a> |
+        <a href="https://fmi.uvt.ro/">Facultatea de Informatica</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="{% static 'TS/cursor.js' %}"></script>
+  <script src="{% static 'TS/galerie.js' %}"></script>
+</body>
+</html>

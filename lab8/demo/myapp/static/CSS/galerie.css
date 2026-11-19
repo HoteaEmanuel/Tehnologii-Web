@@ -1,0 +1,30 @@
+.galerie-titlu {
+  margin-top: 30px;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.carousel-view {
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden; /* Ascunde partea care depaseste containerul */
+  border: 4px solid #1b2a4a;
+  border-radius: 12px;
+}
+
+.carousel-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-view img:hover {
+  transform: scale(1.05);
+}

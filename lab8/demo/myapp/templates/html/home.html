@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunitatea de Tehnologii Web</title>
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/home_style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/cursor.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Comunitatea de Tehnologii Web 2025</h1>
+      <nav>
+        <a href="{% url 'home' %}">Acasa</a>
+        <a href="#">Tehnologii</a>
+        <a href="{% url 'universities' %}">Facultati</a>
+        <a href="{% url 'galerie' %}">Galerie</a>
+        <a href="{% url 'chatbot' %}">ChatBot</a>
+        <a href="{% url 'login' %}">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="columns">
+      <div class="column">
+        <h2>Lista de facultati</h2>
+        <p>Aici vei gasi informatii detaliate despre facultatile care ofera programe relevante pentru TW.</p>
+        <a href="{% url 'universities' %}" class="btn">Vezi mai mult</a>
+      </div>
+      <div class="column">
+        <h2>Tehnologii relevante</h2>
+        <p>Descopera cele mai noi tehnologii web si framework-uri folosite in industrie si in educatie.</p>
+        <a href="#" class="btn">Vezi mai mult</a>
+      </div>
+      <div class="column">
+        <h2>ChatBot</h2>
+        <p>Interactioneaza cu ChatBot-ul nostru pentru a primi raspunsuri rapide la intrebarile tale.</p>
+        <a href="{% url 'chatbot' %}" class="btn">Vezi mai mult</a>
+      </div>
+      <div class="column">
+        <h2>Galerie</h2>
+        <p>Priveste galeria de imagini cu schimbare automata la fiecare 3 secunde.</p>
+        <a href="{% url 'galerie' %}" class="btn">Vezi mai mult</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Comunitatea de Tehnologii Web</p>
+      <p>
+        <a href="https://www.uvt.ro/">Universitatea de Vest din Timisoara</a> |
+        <a href="https://fmi.uvt.ro/">Facultatea de Informatica</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="{% static 'TS/cursor.js' %}"></script>
+  <script src="{% static 'TS/animatie.js' %}"></script>
+</body>
+</html>

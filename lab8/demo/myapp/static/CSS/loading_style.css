@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(90deg, #1b2a4a, #35507f);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 96px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.loading-text {
+  margin: 0 0 32px;
+  color: #c7d1e6;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.loader {
+  border: 8px solid rgba(245, 247, 251, 0.2);
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

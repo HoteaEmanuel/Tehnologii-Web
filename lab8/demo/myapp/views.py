@@ -27,3 +27,7 @@ def galerie(request):
 
 def chatbot(request):
     return render(request, "./html/chatbot.html")
+
+
+def characters(request):
+    return render(request, "./html/characters.html")

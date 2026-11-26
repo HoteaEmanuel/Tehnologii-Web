@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/home_style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/characters_style.css' %}">
+  <title>Characters - Rick and Morty API</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Comunitatea de Tehnologii Web 2025</h1>
+      <nav>
+        <a href="{% url 'home' %}">Acasa</a>
+        <a href="#">Tehnologii</a>
+        <a href="{% url 'universities' %}">Facultati</a>
+        <a href="{% url 'galerie' %}">Galerie</a>
+        <a href="{% url 'chatbot' %}">ChatBot</a>
+        <a href="{% url 'characters' %}">Personaje</a>
+        <a href="{% url 'login' %}">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Rick and Morty characters</h2>
+    <p class="page-intro">Search the public Rick and Morty API. Your last search is remembered.</p>
+
+    <!-- Search area -->
+    <form id="searchForm">
+      <input id="queryInput" type="text" placeholder="Search a character, e.g. rick" aria-label="Character name">
+      <button id="searchBtn" type="submit">Search</button>
+    </form>
+
+    <!-- Status area -->
+    <p id="status" aria-live="polite"></p>
+
+    <!-- Results area -->
+    <div id="results"></div>
+  </main>
+
+  <footer>
+    <p>Data from <a href="https://rickandmortyapi.com" target="_blank" rel="noopener">rickandmortyapi.com</a></p>
+  </footer>
+
+  <script src="{% static 'JS/characters.js' %}"></script>
+</body>
+</html>
